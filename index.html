@@ -2,22 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Focus Timer</title>
+    <title>FocusPro Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <div id="loginSection">
-            <h2>Welcome to Focus</h2>
+    <div id="loginOverlay">
+        <div class="card">
+            <h1>FocusPro</h1>
             <button id="loginBtn">Login with Discord</button>
         </div>
+    </div>
+
+    <div id="app" style="display:none;">
+        <nav class="sidebar">
+            <h2 style="color:#5865f2">FocusPro</h2>
+            <button onclick="showView('timer')">Timer</button>
+            <button onclick="showView('settings')">Settings</button>
+            <button onclick="showView('premium')">Premium</button>
+        </nav>
         
-        <div id="dashboard" style="display:none;">
-            <h2>Focus Session</h2>
-            <div id="timerDisplay">25:00</div>
-            <button id="startBtn">Start Timer</button>
-        </div>
+        <main id="content">
+            <div id="timerView" class="view">
+                <h2>Session Timer</h2>
+                <div id="timerDisplay">25:00</div>
+                <button id="startBtn">Start Focus</button>
+            </div>
+
+            <div id="settingsView" class="view" style="display:none;">
+                <h2>Settings</h2>
+                <div class="input-group">
+                    <label><input type="checkbox" id="notifToggle"> Enable Notifications</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="statusInput" placeholder="Discord Status Message">
+                </div>
+                <button onclick="saveSettings()">Save Changes</button>
+            </div>
+
+            <div id="premiumView" class="view" style="display:none;">
+                <h2>Premium</h2>
+                <p id="premiumStatus">Status: Free Tier</p>
+                <button id="upgradeBtn">Get Lifetime Pro</button>
+            </div>
+        </main>
     </div>
     <script src="app.js"></script>
 </body>
