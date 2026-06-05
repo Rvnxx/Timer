@@ -1,0 +1,7 @@
+body { background-color: #2f3136; color: #dcddde; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+#app { background-color: #202225; padding: 40px; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); text-align: center; width: 300px; }
+h2 { color: #ffffff; }
+button { background-color: #5865f2; color: white; border: none; padding: 12px 20px; border-radius: 4px; cursor: pointer; width: 100%; font-weight: bold; }
+button:hover { background-color: #4752c4; }
+#startBtn { background-color: #3ba55d; margin-top: 15px; }
+#timerDisplay { font-size: 3rem; margin: 20px 0; color: #ffffff; }
